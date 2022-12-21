@@ -1,7 +1,13 @@
-jobs:  
+jobs:
 - deployment: VMDeploy
   displayName: web
+  pool:
+    vmImage: 'Ubuntu-latest'
   environment:
-    name:  AIFitFindertest
+    name: AIFitFindertest
     resourceType: VirtualMachine
-    tags: web
+  strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo my first deployment
