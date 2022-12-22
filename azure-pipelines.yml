@@ -2,6 +2,6 @@ jobs:
 - deployment: VMDeploy
   displayName: web
   environment:
-    name:  <environment name>
+    name:  AIFitFindertest
     resourceType: VirtualMachine
     tags: web
